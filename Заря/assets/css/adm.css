@@ -1,0 +1,92 @@
+header{
+    justify-content: center;
+    position: static;
+}
+input,select,textarea{
+    outline: none;
+    width: 200px;
+}
+section.flex{
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+label{
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+::-webkit-file-upload-button,button{
+    padding: 1% 2%;
+    font-size: medium;
+}
+::-webkit-file-upload-button{
+    padding: 2%;
+}
+input[type=submit],.button{
+    width: 100%;
+    font-size: larger;
+}
+input[type=submit]:hover{
+    background: green;
+}
+form h3{
+    text-align: center;
+    margin: 0;
+}
+form{
+    padding: 1%;
+    border: solid 1px green;
+    margin: .3%;
+    width: 40%;
+}
+.secret{
+    text-align: center;
+    padding: 10%;
+    font-size: xx-large;
+    display: none;
+}
+table,td{
+    border-collapse: collapse;
+}
+table{
+    margin: .3%;
+    border: solid 1px green;
+}
+th{
+    background-color: var(--green);
+    color: white;
+    border: solid 1px white;
+}
+#img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+form a{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: var(--green);
+}
+@media screen and (max-width: 600px){
+    main{
+        display: none;
+    }
+    header{
+        text-align: center;
+        padding: 10%;
+    }
+    .secret{
+        display: block;
+        margin: 50% 0;
+    }
+    footer{
+        padding: 5%;
+        font-size: larger;
+    }
+}

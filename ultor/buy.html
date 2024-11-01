@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTOR</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script/js.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="that/svg/logo.svg" class="logo"></a>
+        <div class="nav flex">
+            <button onclick="SW('a1')"><span>Каталог</span><img src="that/svg/catalog.svg"></button>
+            <button onclick="SW('a2')"><span>Корзина</span><img src="that/svg/bin.svg"></button>
+            <button onclick="SW2('a3')"><span>Профиль</span><img src="that/svg/acc.svg"></button>
+        </div>
+    </header>
+    <main class='main3'><br><br><br><br>
+        <span class="bc"><a href="dress.html">Одежда</a> > Бушлат Охранника...</span>
+        <section class="buyer flex" id='huba'>
+            <img src="that/prod/dress/t1/pic (1).jpg">
+            <div>
+                <h1>Бушлат охранника Альфа-2</h1><h3>Окрас: серый камыш</h3><h1>5 999₽</h1>
+                <div class="rars" style="margin:0">
+                    <span>Выбрать размер:</span><br>
+                    <span style="cursor:pointer">На данный момент есть только 5-58</span>
+                </div>
+                <div class="sell" onclick="Add()" style="margin:0">В корзину</div>
+            </div>
+        </section>
+    </main>
+    <nav id="a1">
+        <ul>
+            <li class="for-nav"><a href="dress.html">Одежда</a></li>
+            <li>Верх</li>
+            <li>Низ</li>
+            <li>Головные уборы</li>
+            <li>Костюмы</li>
+            <li>Трикотаж</li>
+            <li>Формы</li>
+        </ul>
+        <ul>
+            <li class="for-nav"><a href="boot.html">Обувь</a></li>
+            <li>Берцы</li>
+            <li>Ботинки</li>
+            <li>Гамаши</li>
+            <li>Кеды</li>
+            <li>Ледоходы</li>
+            <li>Сапоги</li>
+        </ul>
+        <ul>
+            <li class="for-nav"><a href="thing.html">Снаряжение</a></li>
+            <li>Защитное<br>снаряжение</li>
+            <li>Кобуры и чехлы</li>
+            <li>Походные<br>снаряжение</li>
+            <li>Рюкзаки и сумки</li>
+            <li>Фонари</li>
+        </ul>
+        <ul>
+            <li class="for-nav"><a href="gun.html">Оружие</a></li>
+            <li>Первое оружие</li>
+            <li>Взрывное</li>
+            <li>Гладкоствольное</li>
+            <li>Пневматика</li>
+            <li>Травматика</li>
+        </ul>
+    </nav>
+    <nav id="a2"><h1 style="width:100%;text-align:center">Корзина пуста...</h1></nav>
+    <form id="a3">
+    <h2>Авторизация</h2>
+    <div class="flex">
+        <label for="log">Логин<a href="admin.html">x</a></label><input type="text" name="log">
+        <label for="pas">Пароль<a href="manager.html">x</a></label><input type="password" name="pas">
+        <button form="a3">Войти</button>
+    </div>
+    </form>
+    <footer>
+        <ul>
+            <li><a href="">Связь</a></li>
+            <li><a href="">Доставка</a></li>
+            <li><a href="">О компании</a></li>
+        </ul>
+        <ul style="text-align:center">
+            <li><a href="">Все права защищены</a></li>
+            <li><a href="">ULTOR 2024</a></li>
+            <li><a href="">dev: d0lmany</a></li>
+        </ul>
+        <ul style="text-align:end">
+            <li><a href="">mir</a></li>
+            <li><a href="">visa</a></li>
+            <li><a href="">mastercard</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

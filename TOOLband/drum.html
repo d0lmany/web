@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ударные</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        .navbar a{color:white}
+        .navbar a:hover{color:white}
+        #tab-content .active{display:flex;flex-wrap:wrap;justify-content:space-around}
+        .modal-content{background:#2B2B2B}
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display:flex;align-items:center">
+            <img src="img/svg/logo.svg" class="logo">
+            <h4>Музыкальные инструменты<br>От отечественных производителей</h4>
+        </div>
+        <nav class="navbar navbar-expand-lg" style="background-color:#958D8C80">
+                <ul class="navbar-nav container-fluid" style="justify-content:space-around">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="str.html">Струнные</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="drum.html">Ударные</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="key.html">Клавишные</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blow.html">Духовые</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="clear.html">Уход</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sitemap.html">Карта сайта</a>
+                  </li>
+                </ul>
+          </nav>
+    </header>
+    <div class="banners" style="background-image:url(img/banner/pic\ \(2\).jpeg)">
+            <h2>Ударные</h2></div>
+            <div class="cc">
+      <main id="tab-content">
+        <div class="tab-pane fade show active" id="acous" role="tabpanel">
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/acous/pic (1).webp"></div>
+            <div class="card-body">
+                <h5 id='a1'>Cort AC70 OP W_BAG</h5>
+                <p>5 600/комп <button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a1`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+          <div class="img-in-card"><img src="img/prod/drum/acous/pic (2).webp"></div>
+          <div class="card-body">
+              <h5 id='a2'>Kremona S65C-GG Sofia</h5>
+              <p>4 060/шт <button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a2`)">+</button></p>
+          </div>
+          </section>
+          <section class="card">
+          <div class="img-in-card"><img src="img/prod/drum/acous/pic (3).webp"></div>
+          <div class="card-body">
+            <h5 id='a3'>Alhambra 7.800 Open</h5>
+            <p>7 260/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a3`)">+</button></p>
+          </div>
+          </section>
+          <section class="card">
+          <div class="img-in-card"><img src="img/prod/drum/acous/pic (4).webp"></div>
+          <div class="card-body">
+          <h5 id='a4'>Cort AC100-SG</h5>
+          <p>4 760/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a4`)">+</button></p>
+          </div>
+          </section>
+          <section class="card">
+          <div class="img-in-card"><img src="img/prod/drum/acous/pic (5).webp"></div>
+          <div class="card-body">
+          <h5 id='a5'>Kremona S65S-GG Sofia</h5>
+          <p>1 050 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a5`)">+</button></p>
+          </div>
+          </section>
+          <section class="card">
+          <div class="img-in-card"><img src="img/prod/drum/acous/pic (6).webp"></div>
+          <div class="card-body">
+          <h5 id='a6'>Kremona F65C Cedar</h5>
+          <p>3 740 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a6`)">+</button></p>
+          </div>
+          </section>
+          <section class="card">
+          <div class="img-in-card"><img src="img/prod/drum/acous/pic (7).webp"></div>
+          <div class="card-body">
+          <h5 id='a7'>Cort AC100 OP</h5>
+          <p>4 190 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a7`)">+</button></p>
+          </div>
+          </section>
+          <section class="card">
+          <div class="img-in-card"><img src="img/prod/drum/acous/pic (8).webp"></div>
+          <div class="card-body">
+          <h5 id='a8'>Parkwood PC90-WBAG</h5>
+          <p>5 820 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`a8`)">+</button></p>
+          </div>
+          </section>
+    </div>
+        <div class="tab-pane fade" id="bass" role="tabpanel">
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (1).webp"></div>
+            <div class="card-body">
+              <h5 id='b1'>Homage HEB700BK</h5>
+              <p>18 330 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b1`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (2).webp"></div>
+            <div class="card-body">
+              <h5 id='b2'>Clevan CB-40-NA</h5>
+              <p>34 060/шт <button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b2`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (3).webp"></div>
+            <div class="card-body">
+              <h5 id='b3'>CORT GB34JJ-BK GB</h5>
+              <p>47 260/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b3`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (4).webp"></div>
+            <div class="card-body">
+              <h5 id='b4'>Homage HEB760SB</h5>
+              <p>14 760/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b4`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (5).webp"></div>
+            <div class="card-body">
+              <h5 id='b5'>CORT Action Bass V Plus</h5>
+              <p>31 050 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b5`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (6).webp"></div>
+            <div class="card-body">
+              <h5 id='b6'>ROCKDALE Stars Jazz</h5>
+              <p>43 740 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b6`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (7).webp"></div>
+            <div class="card-body">
+              <h5 id='b7'>CORT GB34JJ-3TS</h5>
+              <p>14 190 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b7`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/bass/pic (8).webp"></div>
+            <div class="card-body">
+              <h5 id='b8'>Prodipe JMFJB80RACAR</h5>
+              <p>15 820 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`b8`)">+</button></p>
+            </div>
+          </section>
+    </div>
+        <div class="tab-pane fade" id="ukul" role="tabpanel">
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (1).webp"></div>
+            <div class="card-body">
+              <h5 id='c1'>Kaimana UK-21 CS</h5>
+              <p>8 330 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c1`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (2).webp"></div>
+            <div class="card-body">
+              <h5 id='c2'>Kaimana UK-21 BLS</h5>
+              <p>4 060/шт <button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c2`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (3).webp"></div>
+            <div class="card-body">
+              <h5 id='c3'>DEVISER UK21-50M</h5>
+              <p>7 260/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c3`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (4).webp"></div>
+            <div class="card-body">
+              <h5 id='c4'>DEVISER UK20-50</h5>
+              <p>4 760/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c4`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (5).webp"></div>
+            <div class="card-body">
+              <h5 id='c5'>Mahalo MD1HAGNB</h5>
+              <p>1 050 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c5`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (6).webp"></div>
+            <div class="card-body">
+              <h5 id='c6'>Mahalo MR1TBRK</h5>
+              <p>3 740 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c6`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (7).webp"></div>
+            <div class="card-body">
+              <h5 id='c7'>Flight ULTRA S-42</h5>
+              <p>4 190 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c7`)">+</button></p>
+            </div>
+          </section>
+          <section class="card">
+            <div class="img-in-card"><img src="img/prod/drum/ukul/pic (8).webp"></div>
+            <div class="card-body">
+              <h5 id='c8'>Flight TUS PAPIN</h5>
+              <p>5 820 ₽/шт<button data-bs-toggle="modal" data-bs-target="#buy" onclick="SH(`c8`)">+</button></p>
+            </div>
+          </section>
+    </div>
+      </main>
+      <div class="modal fade" id="buy" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <h5 class="modal-header modal-title" id='h'>Заголовок</h5>
+            <div class="modal-body">
+              <button id="minus" onclick="min()">-</button><input type="text" value="1" id="skok"><button id="plus" onclick="plu()"">+</button>
+              <button type="button" id="add" onclick="alert('Товар добавлен в корзину')">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <ul id="tab" role="tablist">
+            <button class="active" id="acous-tab" data-bs-toggle="pill" data-bs-target="#acous" role="tab">Барабаны</button>
+            <button id="bass-tab" data-bs-toggle="pill" data-bs-target="#bass" role="tab">Барабанные установки</button>
+            <button id="ukul-tab" data-bs-toggle="pill" data-bs-target="#ukul" role="tab">Стойки</button>
+        </ul>
+      </aside>
+</div>
+    <footer>
+        <ul>
+            <li>2024 © “TOOL band”</li>
+            <li>Все права защищены.</li>
+            <li>dev: d0lmany</li>
+        </ul>
+        <ul>
+            <li>8-800-885-32-32</li>
+            <li>toba@info.con</li>
+            <li>ул. 50-летия ВЛКСМ</li>
+        </ul>
+        <ul>
+            <li>mirpay</li>
+            <li>mastercard</li>
+            <li>maestro</li>
+        </ul>
+    </footer>
+    </body>
+</html>

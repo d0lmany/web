@@ -1,0 +1,148 @@
+body{
+    background:#2B2B2B;
+    color:white;
+    font-family:Arial;
+    scrollbar-width:none;
+}
+body::-webkit-scrollbar{width:0}
+header{
+    position:fixed;
+    z-index:10;
+    width:100%
+}
+h1,h2,h4{font-weight:bold;margin-bottom:0}
+h4 span{color:gray}
+h3{font-weight:bold;
+    text-shadow: 3px 0 3px #000, 
+    0 3px 3px #000, 
+    -3px 0 3px #000, 
+    0 -3px 3px #000;
+    padding-top:10%;
+}
+.logo{
+    width:80px;
+    padding-right: 1%;
+}
+header a{padding:10px}
+.nav-link{
+    font-weight:bold;
+    font-size:larger;
+    background: #ffffff1a;
+    min-width:200px;
+    text-align:center;
+    color:white;
+}
+.nav-link:hover{background:#ffffff5e;color:white}
+#carouselExampleSlidesOnly{height:450px;overflow:hidden}
+.plushka{width:33%;min-height:250px;padding-top:3%}
+footer{background:#454443;display:flex;justify-content: space-between;padding:1%}
+footer ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+footer ul li{
+    transition:.5s;
+    color:#A9A9A9;
+    font-weight:bolder;
+    cursor:pointer;
+}
+footer ul li:hover{
+    transition:.5s;
+    color:white;
+}
+/*     КАРТА САЙТА      */
+article{display:flex;justify-content: space-evenly}
+.h-ul{
+    list-style:none;
+    font-size:xx-large
+}
+.h-ul a{
+    text-decoration:none;
+    color:white
+}
+/*     ТОВАРЫ     */
+.banners h2{
+    font-size:3rem;
+    max-height:50px;
+}
+.banners{
+    height:450px;
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.cc{display:flex;justify-content:space-around;margin:1%}
+main,aside{
+    background:#222;
+    margin:.3%;
+}
+aside ul{
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:20px;
+}
+.tab-pane{display:none}
+aside ul button{
+    border:0;
+    background:none;
+    color:#A4A4A4;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: left;
+}
+aside ul button.active{color:white;text-align:left}
+.card{
+    background:#2B2B2B;
+    color:white;
+    cursor: pointer;
+    margin:1% 0;
+}
+.card h5{font-weight: bolder}
+.card p{
+    margin:0;
+    color:#04BB00;
+    font-weight: bolder
+}
+.img-in-card img{
+    min-width:240px;
+    min-height:240px;
+}
+.img-in-card{
+    margin:15px 15px 0 15px;
+    overflow: hidden;
+    max-width: 240px;
+    max-height: 240px;
+}
+.card button,#add{
+    border:none;
+    background:#04BB00;
+    color:white;
+    font-weight: bolder;
+    border-radius: 5px;
+    float: right;
+    transition:.25s;
+}
+.card button:hover{
+    box-shadow:#04BB00 0px 0px 5px;
+    transition:.25s;
+}
+#minus,#plus{
+    border:none;
+    background:#252525;
+    color:white;
+    font-weight: bolder;
+    width:25px;
+}
+#skok{
+    background:#2B2B2B;
+    outline:none;
+    color:white;
+    width:100px;
+    border:none;
+    text-align: center;
+    font-weight: bolder;
+}

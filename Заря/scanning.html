@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сканирование</title>
+    <link rel="shortcut icon" href="assets/logo/logo.svg" type="image/svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/scan.css">
+    <script src="assets/js/scan.js" defer></script>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" id="upload">
+        <section>
+            <div id="img"></div>
+            Загрузите изображение или сделайте новое
+            <input type="file" name="picture" id="picture" accept="image/*" required onchange="magic()">
+        </section>
+        <section>
+            <button type="button"><a href="index.html">На главную</a></button>
+            <button type="button" onclick="del()">Сбросить</button>
+            <button type="submit">Подтвердить</button>
+        </section>
+    </form>
+</body>
+</html>
