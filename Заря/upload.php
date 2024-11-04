@@ -22,7 +22,7 @@ if (isset($_FILES["picture"]) && is_uploaded_file($_FILES["picture"]['tmp_name']
     curl_close($ch);
     if ($response === false) {
         echo json_encode(['success' => false, 'message' => 'Ошибка при обращении к API.']);
-        unlink($path); // Очистка
+        unlink($path);
         exit;
     }
 

@@ -1,32 +1,46 @@
 <?php
 include "connect.php";
-function lol($type){
-    switch($type){
-        case "int":
-            return "INT";
-            break;
-        case "string":
-            return "VARCHAR(255)";
-            break;
+$name = htmlspecialchars($_POST['name']); $authors = htmlspecialchars($_POST['authors']);
+$city = htmlspecialchars($_POST['city']); $yof = htmlspecialchars($_POST['yof']);
+$map = htmlspecialchars($_POST['map']); $h1 = htmlspecialchars($_POST['h1']);
+$p1 = htmlspecialchars($_POST['p1']); $h2 = htmlspecialchars($_POST['h2']);
+$p2 = htmlspecialchars($_POST['p2']); $facts = htmlspecialchars($_POST['facts']); $photos = $_FILES['photo']; $good = false;
+
+$link = str_replace("maps","map-widget/v1",$map);
+
+$info = "<h3>$h1</h3><p>$p1</p><h3>$h2</h3><p>$p2</p>";
+
+$fa = explode("\n",$facts); $facts = "";
+foreach($fa as $f){
+    $facts .= "<li>$f</li>";
+}
+
+$random = bin2hex(random_bytes(5));
+mkdir("assets/img/$random"); $auth = [];
+for ($i=0; $i < count($photos["name"]); $i++) { 
+    $ftmpname = $photos["tmp_name"][$i];
+    $ftype = str_replace("image/","",$photos["type"][$i]);
+    $tfn = 'f'.($i+1);
+    if(!empty($_POST[$tfn])){
+        $auth[] = htmlspecialchars($_POST[$tfn]);
+        if(move_uploaded_file($ftmpname,"assets/img/$random/$i.$ftype")){
+            echo "загружено";
+            $good = true;
+        } else{
+            echo "ошибка загрузки";
+            $good = false;
+        }
     }
 }
-$w=$_GET["w"];
-switch($w){
-    case 0:
-        $name = $_POST["name"]; $authors = $_POST["authors"]; $city = $_POST["city"]; $yof = $_POST["yof"]; $pics = $_POST["pics"]; 
-        $info = $_POST["info"]; $facts = $_POST["facts"]; $map = $_POST["map"]; $file_count = 1;
-        foreach($_FILES["photo"]["tmp_name"] as $key => $tmp_name){
-            $path = "assets/img/$file_count/img" . $file_count . ".png";
-            if(move_uploaded_file($tmp_name,$path)){
-                echo "Загружено";
-            } else {
-                echo "ошибка загрузки файла";
-            }
-            $file_count++;
-        }
-        $stmt = $pdo -> prepare("INSERT INTO objects(name,authors,city,yof,info,facts,map,pics) VALUES(?,?,?,?,?,?,?,?)");
-        $stmt -> execute([$name,$authors,$city,$yof,$info,$facts,$map,$pics]);
-        break;
+$json = json_encode(['authors' => $auth]);
+try{
+    $sql = $pdo -> prepare("INSERT INTO objects(name,authors,city,yof,map,info,facts,srcs,path) VALUES(?,?,?,?,?,?,?,?,?)");
+    $sql -> execute([$name,$authors,$city,$yof,$link,$info,$facts,$json,$random]); $good = true;
+} catch (PDOException $e){
+    echo $e;
+    $good = false;
 }
-echo "<script>window.location.href = 'adm.html'</script>";
+if($good){
+    echo "<script>window.location.href = 'adm.html'</script>";
+}
 ?>

@@ -75,6 +75,14 @@ table,tr,td{
     border: solid var(--green);
     border-collapse: collapse;
 }
+table{
+    width: 100%;
+}
+th{
+    background: var(--green);
+    color: white;
+    border: solid 2px white;
+}
 @media screen and (max-width: 600px){
     article{
         padding: 1%;
@@ -88,8 +96,8 @@ table,tr,td{
     .about{
         flex-direction: column;
     }
-    .album{
-        display: none;
+    .album img{
+        height: 50px;
     }
     .wrap{
         height: min-content;

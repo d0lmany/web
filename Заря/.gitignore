@@ -1,4 +1,3 @@
 doc/
 temp/
-assets/img/*
-!assets/img/banner.jpg
+qr/

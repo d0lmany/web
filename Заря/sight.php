@@ -36,9 +36,18 @@ if(isset($_GET["id"])){
         <div class="spr"></div>
         <div class="about">
             <section>
-                <div class="wrap"><img src="<? echo "assets/img/".$response["id"]."/img1.png" ?>" id="main"></div>
+                <div class="wrap"><img src="<?
+                $path = "assets/img/".$response["path"];
+                $files = array_diff(scandir($path), array('.', '..'));
+                echo $path."/".$files[2];
+                ?>" id="main"></div>
                 <div class="album">
-                    <? for($i = 1; $i < 6; $i++){echo "<img src='assets/img/".$response["id"]."/img$i.png' onclick='select(this)'>";} ?>
+                    <?
+                    for ($i=2; $i < count($files)+2; $i++) { 
+                        $p = $path."/".$files[$i];
+                        echo "<img src=$p onclick='select(this)'>";
+                    }
+                    ?>
                 </div>
             </section>
             <section>
@@ -58,10 +67,10 @@ if(isset($_GET["id"])){
                 <h3>Источники изображений</h3>
                 <section>
                     <?
-                        $b = json_decode($response["pics"], true);
+                        $b = json_decode($response["srcs"], true);
                         $authors = $b['authors'];
                         echo "<table>";
-                        echo "<tr><td>№</td><td>Источник</td></tr>";
+                        echo "<tr><th>№</th><th>Источник</th></tr>";
                         foreach ($authors as $index => $author) {
                             echo "<tr><td>" . ($index + 1) . "</td><td>" . htmlspecialchars($author) . "</td></tr>";
                         }
@@ -90,7 +99,7 @@ if(isset($_GET["id"])){
         </ul>
         <ul>
             <li>О нас</li>
-            <li>MIT License</li>
+            <li><a href="https://mit-license.org/">MIT License</a></li>
             <li><a href="https://d0lmany.netlify.app">dev: d0lmany</a></li>
         </ul>
         <ul>
